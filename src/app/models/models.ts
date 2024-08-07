@@ -9,3 +9,8 @@ export interface HeroItem extends MenuItem {
   hosted: string;
   status: string;
 }
+
+export interface CategoryHero {
+  categoryTitle: string;
+  children: HeroItem[];
+}
