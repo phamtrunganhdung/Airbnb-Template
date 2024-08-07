@@ -1,4 +1,7 @@
-import { Component } from '@angular/core';
+import {
+  Component,
+  Input,
+} from '@angular/core';
 
 @Component({
   selector: 'app-search-header',
@@ -6,4 +9,6 @@ import { Component } from '@angular/core';
   imports: [],
   templateUrl: './search-header.component.html',
 })
-export class SearchHeaderComponent {}
+export class SearchHeaderComponent {
+  @Input() isChangeSearch!: boolean;
+}

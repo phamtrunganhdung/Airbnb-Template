@@ -1,4 +1,9 @@
-import { Component, EventEmitter, HostListener, Output } from '@angular/core';
+import {
+  Component,
+  EventEmitter,
+  HostListener,
+  Output,
+} from '@angular/core';
 
 import { CategoryHero } from '../../models/models';
 import { HeroItemComponent } from '../hero-item/hero-item.component';
@@ -84,17 +89,25 @@ export class HeroComponent {
   ];
 
   @Output() scrollEvent = new EventEmitter<boolean>();
+  @Output() scrollEventHead = new EventEmitter<boolean>();
 
   lastScrollTop: number = 0;
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
-    const st = document.documentElement.scrollTop;
+    const st = window.scrollY;
+    //show/hide footer tab-bar
     if (st > this.lastScrollTop) {
       this.scrollEvent.emit(false);
     } else {
       this.scrollEvent.emit(true);
     }
     this.lastScrollTop = st <= 0 ? 0 : st;
+    //change style header
+    if (st >= 100) {
+      this.scrollEventHead.emit(true);
+    } else {
+      this.scrollEventHead.emit(false);
+    }
   }
 }

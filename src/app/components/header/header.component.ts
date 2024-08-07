@@ -1,6 +1,11 @@
-import { Component } from '@angular/core';
+import {
+  Component,
+  Input,
+} from '@angular/core';
 
-import { SearchHeaderComponent } from '../search-header/search-header.component';
+import {
+  SearchHeaderComponent,
+} from '../search-header/search-header.component';
 import { SlideMenuComponent } from '../slide-menu/slide-menu.component';
 
 @Component({
@@ -9,4 +14,6 @@ import { SlideMenuComponent } from '../slide-menu/slide-menu.component';
   imports: [SlideMenuComponent, SearchHeaderComponent],
   templateUrl: './header.component.html',
 })
-export class HeaderComponent {}
+export class HeaderComponent {
+  @Input() isChangeSearch!: boolean;
+}

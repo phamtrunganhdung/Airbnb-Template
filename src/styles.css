@@ -33,3 +33,22 @@
 .tab-bar.hidden {
   transform: translateY(100%);
 }
+.transition-search-head {
+  transition-property: width, transform;
+  transition-duration: 0.4s, 0.2s;
+}
+.zoom-out-search-head {
+  position: absolute;
+  width: 100%;
+  transform: translate(-122px, -150px);
+}
+.zoom-out-search-head .title-search-menu-hide {
+  display: none;
+}
+.zoom-out-search-head .title-search-zoom-out {
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 18%;
+}

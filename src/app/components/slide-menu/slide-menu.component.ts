@@ -95,5 +95,25 @@ export class SlideMenuComponent {
       img: '/img/menu-icon/islands.webp',
       title: 'Islands',
     },
+    {
+      img: '/img/menu-icon/piano.webp',
+      title: 'Pianos',
+    },
+    {
+      img: '/img/menu-icon/camping.webp',
+      title: 'Camping',
+    },
+    {
+      img: '/img/menu-icon/design.webp',
+      title: 'Design',
+    },
+    {
+      img: '/img/menu-icon/countryside.webp',
+      title: 'Country Side',
+    },
+    {
+      img: '/img/menu-icon/topcity.webp',
+      title: 'Top cities',
+    },
   ];
 }

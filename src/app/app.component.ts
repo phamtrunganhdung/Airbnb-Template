@@ -3,8 +3,12 @@ import { RouterOutlet } from '@angular/router';
 
 import { HeaderComponent } from './components/header/header.component';
 import { HeroComponent } from './components/hero/hero.component';
-import { SearchHeaderComponent } from './components/search-header/search-header.component';
-import { SlideMenuComponent } from './components/slide-menu/slide-menu.component';
+import {
+  SearchHeaderComponent,
+} from './components/search-header/search-header.component';
+import {
+  SlideMenuComponent,
+} from './components/slide-menu/slide-menu.component';
 import { TabBarComponent } from './components/tab-bar/tab-bar.component';
 
 @Component({
@@ -23,8 +27,12 @@ import { TabBarComponent } from './components/tab-bar/tab-bar.component';
 export class AppComponent {
   title = 'airbnb-template';
   isTabBarVisible = true;
+  isZoomOutSearchHeader = false;
 
   handleScrollEvent(isVisible: boolean) {
     this.isTabBarVisible = isVisible;
+  }
+  handleScrollEventHead(isChange: boolean) {
+    this.isZoomOutSearchHeader = isChange;
   }
 }
