@@ -16,60 +16,42 @@
 }
 .menu-active::after {
   content: "";
-  display: block;
   width: calc(100% - 1rem);
-  height: 2px;
-  background-color: black;
-  margin-top: 0.5rem;
-  padding: 0 0.5rem;
+  @apply block  h-[2px] bg-black mt-2 px-2 py-0;
 }
 .tab-bar {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  background-color: #fff;
-  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease-in-out;
+  @apply bg-white bottom-0 fixed w-full ease-in-out duration-300 shadow-lg;
 }
 
 .tab-bar.hidden {
-  transform: translateY(100%);
+  @apply translate-y-full;
 }
 .transition-search-head {
   transition-property: width, transform;
   transition-duration: 0.4s, 0.2s;
 }
 .zoom-out-search-head {
-  position: absolute;
-  width: 100%;
   transform: translate(-122px, -165px);
+  @apply absolute w-full;
 }
 .zoom-out-search-head .title-search-menu-hide {
-  display: none;
+  @apply hidden;
 }
 .zoom-out-search-head .title-search-zoom-out {
-  display: block;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  width: 18%;
+  @apply block overflow-hidden whitespace-nowrap text-ellipsis w-[18%];
 }
 .img-container:hover .btn-right {
-  display: flex;
+  @apply flex;
 }
 @media (min-width: 1024px) {
   .zoom-out-search-head {
     transform: translate(0, -165px);
   }
   .zoom-out-search-head .search-header {
-    width: 415px;
-    justify-content: center;
-    position: relative;
-    padding-right: 20px;
+    @apply w-[415px] justify-center relative pr-5;
   }
   .zoom-out-search-head .search-header .btn-search {
-    position: absolute;
-    right: 15px;
+    @apply absolute right-4;
   }
 }
 @media (min-width: 1440px) {
