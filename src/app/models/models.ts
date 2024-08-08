@@ -14,3 +14,8 @@ export interface CategoryHero {
   categoryTitle: string;
   children: HeroItem[];
 }
+
+export interface FormDefault {
+  title: string;
+  subTitle: string;
+}

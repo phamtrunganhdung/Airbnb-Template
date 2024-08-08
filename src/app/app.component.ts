@@ -1,14 +1,11 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
+import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { HeroComponent } from './components/hero/hero.component';
-import {
-  SearchHeaderComponent,
-} from './components/search-header/search-header.component';
-import {
-  SlideMenuComponent,
-} from './components/slide-menu/slide-menu.component';
+import { SearchHeaderComponent } from './components/search-header/search-header.component';
+import { SlideMenuComponent } from './components/slide-menu/slide-menu.component';
 import { TabBarComponent } from './components/tab-bar/tab-bar.component';
 
 @Component({
@@ -21,6 +18,7 @@ import { TabBarComponent } from './components/tab-bar/tab-bar.component';
     HeaderComponent,
     HeroComponent,
     TabBarComponent,
+    FooterComponent,
   ],
   templateUrl: './app.component.html',
 })

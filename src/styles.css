@@ -3,10 +3,12 @@
 @tailwind components;
 @tailwind utilities;
 
+.mdl-js {
+  overflow-x: hidden;
+}
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 }
-
 /* Hide scrollbar for IE, Edge and Firefox */
 .no-scrollbar {
   -ms-overflow-style: none; /* IE and Edge */
@@ -40,7 +42,7 @@
 .zoom-out-search-head {
   position: absolute;
   width: 100%;
-  transform: translate(-122px, -150px);
+  transform: translate(-122px, -165px);
 }
 .zoom-out-search-head .title-search-menu-hide {
   display: none;
@@ -51,4 +53,27 @@
   white-space: nowrap;
   text-overflow: ellipsis;
   width: 18%;
+}
+.img-container:hover .btn-right {
+  display: flex;
+}
+@media (min-width: 1024px) {
+  .zoom-out-search-head {
+    transform: translate(0, -165px);
+  }
+  .zoom-out-search-head .search-header {
+    width: 415px;
+    justify-content: center;
+    position: relative;
+    padding-right: 20px;
+  }
+  .zoom-out-search-head .search-header .btn-search {
+    position: absolute;
+    right: 15px;
+  }
+}
+@media (min-width: 1440px) {
+  .zoom-out-search-head {
+    transform: translate(0, -130px);
+  }
 }

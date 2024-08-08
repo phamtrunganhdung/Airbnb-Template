@@ -1,9 +1,4 @@
-import {
-  Component,
-  EventEmitter,
-  HostListener,
-  Output,
-} from '@angular/core';
+import { Component, EventEmitter, HostListener, Output } from '@angular/core';
 
 import { CategoryHero } from '../../models/models';
 import { HeroItemComponent } from '../hero-item/hero-item.component';
@@ -84,6 +79,36 @@ export class HeroComponent {
           hosted: 'Hosted by Feid',
           status: 'Sold out',
         },
+        {
+          img: '/img/lame.webp',
+          title: 'Game with Khaby Lame',
+          hosted: 'Hosted by Khaby Lame',
+          status: 'Sold out',
+        },
+        {
+          img: '/img/crash-x-mansion.webp',
+          title: 'Crash at the X-Mansion',
+          hosted: 'Hosted by Julbilee',
+          status: 'Sold out',
+        },
+        {
+          img: '/img/ferrari.webp',
+          title: 'Spend the night in the Ferrari museum',
+          hosted: 'Hosted by Marc Genee',
+          status: 'Sold out',
+        },
+        {
+          img: '/img/uphouse.webp',
+          title: 'Driff off in the Up house',
+          hosted: 'Hosted by Carl Ferdicksend',
+          status: 'Sold out',
+        },
+        {
+          img: '/img/swamp.webp',
+          title: "Shrek's swam",
+          hosted: 'Hosted by Shrek',
+          status: 'Sold out',
+        },
       ],
     },
   ];
@@ -96,6 +121,7 @@ export class HeroComponent {
   @HostListener('window:scroll', [])
   onWindowScroll() {
     const st = window.scrollY;
+
     //show/hide footer tab-bar
     if (st > this.lastScrollTop) {
       this.scrollEvent.emit(false);
@@ -104,10 +130,7 @@ export class HeroComponent {
     }
     this.lastScrollTop = st <= 0 ? 0 : st;
     //change style header
-    if (st >= 100) {
-      this.scrollEventHead.emit(true);
-    } else {
-      this.scrollEventHead.emit(false);
-    }
+    if (st >= 100) this.scrollEventHead.emit(true);
+    else this.scrollEventHead.emit(false);
   }
 }
